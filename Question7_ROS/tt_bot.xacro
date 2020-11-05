@@ -97,7 +97,106 @@
     </collision>
     <xacro:base_inertial/>
   </link>
-
+  <link name ="back_right">
+  <inertial>
+  <mass value="${wheel_mass}"/>
+  <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+  <inertia ixx="0.000526666666667" ixy="0" ixz="0" iyy="0.000526666666667" iyz="0" izz="0.001"/>
+    </inertial>
+    <collision name="back_right_collision">
+      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_dia}/2"/>
+      </geometry>
+    </collision>
+    <visual name="back_right_visual">
+      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_dia}/2"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name = "br_joint" type="continuous">
+  <parent link="base_link"/>
+  <child link="back_right"/>
+  <origin xyz="0 ${base_width}/2 ${wheel_dia}/2" rpy="0 1.5707 1.5707"/>
+  <axis xyz="0 1 0"/>
+  </joint>
+  <link name ="back_right">
+  <inertial>
+  <mass value="${wheel_mass}"/>
+  <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+  <inertia ixx="0.000526666666667" ixy="0" ixz="0" iyy="0.000526666666667" iyz="0" izz="0.001"/>
+    </inertial>
+    <collision name="back_right_collision">
+      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_dia}/2"/>
+      </geometry>
+    </collision>
+    <visual name="back_right_visual">
+      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_dia}/2"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name = "br_joint" type="continuous">
+  <parent link="base_link"/>
+  <child link="back_right"/>
+  <origin xyz="0 ${base_width}/2 ${wheel_dia}/2" rpy="0 1.5707 1.5707"/>
+  <axis xyz="0 1 0"/>
+  </joint>
+  <link name ="front_right">
+  <inertial>
+  <mass value="${wheel_mass}"/>
+  <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+  <inertia ixx="0.000526666666667" ixy="0" ixz="0" iyy="0.000526666666667" iyz="0" izz="0.001"/>
+    </inertial>
+    <collision name="back_right_collision">
+      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_dia}/2"/>
+      </geometry>
+    </collision>
+    <visual name="back_right_visual">
+      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_dia}/2"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name = "br_joint" type="continuous">
+  <parent link="base_link"/>
+  <child link="back_right"/>
+  <origin xyz="0 ${base_width}/2 ${wheel_dia}/2" rpy="0 1.5707 1.5707"/>
+  <axis xyz="0 1 0"/>
+  </joint>
+  <link name ="back_right">
+  <inertial>
+  <mass value="${wheel_mass}"/>
+  <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+  <inertia ixx="0.000526666666667" ixy="0" ixz="0" iyy="0.000526666666667" iyz="0" izz="0.001"/>
+    </inertial>
+    <collision name="back_right_collision">
+      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_dia}/2"/>
+      </geometry>
+    </collision>
+    <visual name="back_right_visual">
+      <origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+      <geometry>
+        <cylinder length="${wheel_height}" radius="${wheel_dia}/2"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name = "br_joint" type="continuous">
+  <parent link="base_link"/>
+  <child link="back_right"/>
+  <origin xyz="0 ${base_width}/2 ${wheel_dia}/2" rpy="0 1.5707 1.5707"/>
+  <axis xyz="0 1 0"/>
+  </joint>
   <!-- CREATING AN INSTANCE OF EACH WHEEL -->
   <!-- ADD 4 WHEELS TO THE ABOVE BOT HERE -->
 </robot>
